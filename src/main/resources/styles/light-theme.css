@@ -1,0 +1,55 @@
+/* Light Theme - Default Theme */
+
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 12px;
+    -fx-base: #f5f5f5;
+    -fx-text-fill: #333333;
+}
+
+/* Navigation Bar */
+.navigation-bar {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 10px;
+}
+
+.navigation-bar .button {
+    -fx-text-fill: white;
+    -fx-background-color: #34495e;
+    -fx-padding: 8px 15px;
+}
+
+.navigation-bar .button:hover {
+    -fx-background-color: #3a5068;
+}
+
+/* Sidebar */
+.sidebar {
+    -fx-background-color: #ecf0f1;
+    -fx-border-width: 0 1 0 0;
+    -fx-border-color: #bdc3c7;
+}
+
+/* Content Area */
+.content-area {
+    -fx-background-color: #ffffff;
+}
+
+/* Status Bar */
+.status-bar {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+}
+
+/* Buttons */
+.button {
+    -fx-padding: 8px 15px;
+    -fx-border-radius: 4;
+    -fx-font-size: 12px;
+}
+
+/* Text Areas */
+.text-area {
+    -fx-font-family: "Courier New", monospace;
+    -fx-font-size: 11px;
+}

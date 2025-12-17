@@ -1,0 +1,94 @@
+version: '3.8'
+
+services:
+  # JavaFX UI Application
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.app
+    container_name: enterprise-app
+    ports:
+      - "8000:8000"
+    environment:
+      - API_URL=http://backend-api:8080
+      - DB_HOST=enterprise-db
+      - DB_PORT=5432
+      - CACHE_HOST=redis-cache
+      - CACHE_PORT=6379
+    depends_on:
+      - backend-api
+      - enterprise-db
+      - redis-cache
+    networks:
+      - enterprise-network
+    volumes:
+      - ./logs:/app/logs
+
+  # Backend API Service
+  backend-api:
+    image: myregistry/backend-api:latest
+    container_name: backend-api
+    ports:
+      - "8080:8080"
+    environment:
+      - DATABASE_URL=jdbc:postgresql://enterprise-db:5432/appdb
+      - DATABASE_USER=admin
+      - DATABASE_PASSWORD=securepassword
+      - CACHE_URL=redis-cache:6379
+    depends_on:
+      - enterprise-db
+      - redis-cache
+    networks:
+      - enterprise-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # PostgreSQL Database
+  enterprise-db:
+    image: postgres:14-alpine
+    container_name: enterprise-db
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=securepassword
+      - POSTGRES_DB=appdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./docker/init-db.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - enterprise-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis Cache Service
+  redis-cache:
+    image: redis:7-alpine
+    container_name: redis-cache
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - enterprise-network
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+  enterprise-network:
+    driver: bridge
+
+volumes:
+  postgres-data:
+  redis-data:
