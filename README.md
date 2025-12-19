@@ -1,5 +1,4 @@
 ## UI Development Roadmap
-[QDK Wasm](https://github.com/microsoft/qdk/tree/main/source/wasm)
 
 ### Phase 1: Core UI Foundation (Current)
 - [] **Main Frame** - Primary application window container
