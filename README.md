@@ -4,6 +4,52 @@
 - [MS Java](https://developer.microsoft.com/en-us/java)
 - [RHEL Java](https://developers.redhat.com/learn/java)
 
+- [Eclipse](https://help.eclipse.org/latest/index.jsp?topic=%2Forg.eclipse.wb.doc.user%2Fhtml%2Findex.html)
+- [Tinymce](https://www.tiny.cloud/tinymce/features/?msclkid=7a1bfba9eb511245e86291ad38017689&utm_source=bing&utm_medium=cpc&utm_campaign=NA%20%7C%20Search%20%7C%20Branded&utm_term=tinymce&utm_content=NA%20%7C%20Search%20%7C%20Branded%20%7C%20TinyMCE%20%7C%20Exact-Phrase)
+
+Eclipse WindowBuilder
+Type: GUI builder for Swing, SWT, GWT.
+Features:
+Drag-and-drop UI components.
+Generates clean Java code automatically.
+Supports multiple layout managers.
+Website: [Eclipse WindowBuilder](https://eclipse.dev/windowbuilder/)
+Usage:
+Install as an Eclipse plugin.
+Create a new JFrame or JPanel visually.
+Switch between Design and Source views.
+2. For Rich Text / HTML Editing in Java Apps
+If you want a WYSIWYG text editor inside your Java application:
+
+JEditorPane / HTMLEditorKit (Built-in Java)
+Type: Basic HTML rendering and editing.
+Pros: No external dependencies.
+Cons: Limited HTML/CSS support.
+Example:
+```
+import javax.swing.*;
+import javax.swing.text.html.HTMLEditorKit;
+import javax.swing.text.html.StyleSheet;
+
+public class SimpleHtmlEditor {
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            JFrame frame = new JFrame("Java WYSIWYG HTML Editor");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+            JEditorPane editorPane = new JEditorPane();
+            editorPane.setEditorKit(new HTMLEditorKit());
+            editorPane.setContentType("text/html");
+            editorPane.setText("<html><body><h1>Hello</h1><p>Edit me!</p></body></html>");
+
+            frame.add(new JScrollPane(editorPane));
+            frame.setSize(500, 400);
+            frame.setVisible(true);
+        });
+    }
+}
+```
+
 ## UI Development Roadmap
 
 ### Phase 1: Core UI Foundation (Current)
