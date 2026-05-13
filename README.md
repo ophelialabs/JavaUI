@@ -1,4 +1,9 @@
 **[Spring initializr](https://start.spring.io/)**
+- [Dev.Java](https://dev.java)
+- [IBM Java](https://developer.ibm.com/languages/java/?utm_source=developer-home&utm_medium=code)
+- [MS Java](https://developer.microsoft.com/en-us/java)
+- [RHEL Java](https://developers.redhat.com/learn/java)
+
 ## UI Development Roadmap
 
 ### Phase 1: Core UI Foundation (Current)
