@@ -1,11 +1,11 @@
 **[Spring initializr](https://start.spring.io/)**
 - [Dev.Java](https://dev.java)
-- [IBM Java](https://developer.ibm.com/languages/java/?utm_source=developer-home&utm_medium=code)
-- [MS Java](https://developer.microsoft.com/en-us/java)
-- [RHEL Java](https://developers.redhat.com/learn/java)
+| [IBM Java](https://developer.ibm.com/languages/java/?utm_source=developer-home&utm_medium=code)
+| [MS Java](https://developer.microsoft.com/en-us/java)
+| [RHEL Java](https://developers.redhat.com/learn/java)
 
-- [Eclipse](https://help.eclipse.org/latest/index.jsp?topic=%2Forg.eclipse.wb.doc.user%2Fhtml%2Findex.html)
-- [Tinymce](https://www.tiny.cloud/tinymce/features/?msclkid=7a1bfba9eb511245e86291ad38017689&utm_source=bing&utm_medium=cpc&utm_campaign=NA%20%7C%20Search%20%7C%20Branded&utm_term=tinymce&utm_content=NA%20%7C%20Search%20%7C%20Branded%20%7C%20TinyMCE%20%7C%20Exact-Phrase)
+| [Eclipse](https://help.eclipse.org/latest/index.jsp?topic=%2Forg.eclipse.wb.doc.user%2Fhtml%2Findex.html)
+| [Tinymce](https://www.tiny.cloud/tinymce/features/?msclkid=7a1bfba9eb511245e86291ad38017689&utm_source=bing&utm_medium=cpc&utm_campaign=NA%20%7C%20Search%20%7C%20Branded&utm_term=tinymce&utm_content=NA%20%7C%20Search%20%7C%20Branded%20%7C%20TinyMCE%20%7C%20Exact-Phrase)
 
 Eclipse WindowBuilder
 Type: GUI builder for Swing, SWT, GWT.
