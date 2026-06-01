@@ -8,19 +8,18 @@
 | [Tinymce](https://www.tiny.cloud/tinymce/features/?msclkid=7a1bfba9eb511245e86291ad38017689&utm_source=bing&utm_medium=cpc&utm_campaign=NA%20%7C%20Search%20%7C%20Branded&utm_term=tinymce&utm_content=NA%20%7C%20Search%20%7C%20Branded%20%7C%20TinyMCE%20%7C%20Exact-Phrase)
 
 ## Eclipse WindowBuilder
-Type: GUI builder for Swing, SWT, GWT.
+Type: GUI builder [Eclipse WindowBuilder](https://eclipse.dev/windowbuilder/) for Swing, SWT, GWT.
 
 - Features:
     * Drag-and-drop UI components.
     * Generates clean Java code automatically.
     * Supports multiple layout managers.
       
-- Website: [Eclipse WindowBuilder](https://eclipse.dev/windowbuilder/)
 1. Usage:
     * Install as an Eclipse plugin.
     * Create a new JFrame or JPanel visually.
     * Switch between Design and Source views.
-    * 
+
 2. For Rich Text / HTML Editing in Java Apps:
 If you want a WYSIWYG text editor inside your Java application:
     * JEditorPane / HTMLEditorKit (Built-in Java)
@@ -28,7 +27,7 @@ If you want a WYSIWYG text editor inside your Java application:
         - Pros: No external dependencies.
         - Cons: Limited HTML/CSS support.
 
-- Example:
+### Example:
 ```
 import javax.swing.*;
 import javax.swing.text.html.HTMLEditorKit;
